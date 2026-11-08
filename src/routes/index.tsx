@@ -1,7 +1,5 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
 import { ContainerPage } from "@/lib/utils";
-import { SiteHeader } from "@/components/site/SiteHeader";
-import { SiteFooter } from "@/components/site/SiteFooter";
 import { clinic } from "@/config/clinic";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -15,24 +13,29 @@ function Index() {
   return (
     <section id="home" className="pt-24 pb-24">
       <ContainerPage>
-        <SiteHeader />
         <div className="max-w-2xl mx-auto mb-16">
           <h2 className="display-lg font-bold text-foreground mb-4">{t("home.introTitle")}</h2>
           <p className="text-lg text-muted-foreground mb-6">{t("home.introBody")}</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{t("home.servicesEyebrow")}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                {t("home.servicesEyebrow")}
+              </h3>
               <p className="text-muted-foreground line-clamp-2">{t("home.servicesTitle")}</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{t("home.conditionsEyebrow")}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                {t("home.conditionsEyebrow")}
+              </h3>
               <p className="text-muted-foreground line-clamp-2">{t("home.conditionsBody")}</p>
             </div>
           </div>
         </div>
         {/* Approach section */}
         <div className="mt-16">
-          <h3 className="text-xl font-semibold text-foreground mb-4">{t("home.approachEyebrow")}</h3>
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            {t("home.approachEyebrow")}
+          </h3>
           <h2 className="display-md font-bold text-foreground mb-6">{t("home.approachTitle")}</h2>
           <div className="grid grid-cols-1 gap-4">
             <div className="p-4 rounded-xl border border-border bg-background hover:bg-card transition-colors">
@@ -89,10 +92,7 @@ function Index() {
             </svg>
           </a>
         </div>
-        <SiteFooter />
       </ContainerPage>
     </section>
   );
 }
-
-export default Index;
