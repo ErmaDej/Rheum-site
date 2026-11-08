@@ -1,5 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ContainerPage } from "@/lib/utils";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+
+import { media } from "@/assets/media";
+import { ScrollReveal } from "@/components/experience/ScrollReveal";
+import { BodyMap } from "@/components/site/BodyMap";
+import { PageHero } from "@/components/site/PageHero";
 import { conditions } from "@/content/conditions";
 import { useI18n } from "@/i18n/LanguageProvider";
 
@@ -10,7 +15,7 @@ export const Route = createFileRoute("/conditions")({
       {
         name: "description",
         content:
-          "Plain-language overviews of common rheumatology conditions including rheumatoid arthritis, gout, lupus and fibromyalgia.",
+          "Plain-language overviews of rheumatoid arthritis, gout, lupus, fibromyalgia and back, shoulder and knee pain — with what clinicians look for.",
       },
     ],
   }),
@@ -21,63 +26,111 @@ function ConditionsPage() {
   const { t, l } = useI18n();
 
   return (
-    <section id="conditions" className="pt-24 pb-24">
-      <ContainerPage>
-        <div className="max-w-2xl mx-auto mb-16">
-          <h2 className="display-lg font-bold text-foreground mb-4">{t("conditions.title")}</h2>
-          <p className="text-lg text-muted-foreground mb-8">{t("conditions.lead")}</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {conditions.map((condition) => (
-              <div
-                key={condition.slug}
-                className="p-6 rounded-2xl border border-background bg-background hover:bg-card transition-colors"
-              >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 17c1.654-3.26 5.268-3.26 6.922 0l3.178 6.445c-.516 1.25-1.813 2.093-2.71 1.667L18.5 19l-5.743 2.19L8.134 22l1.128-4.707c.9-1.25 1.137-2.813.7-4.25zM12 3l5.038 10.09L18.5 15l-5.528 2.177 1.062-5.688L12 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{l(condition.title)}</h3>
-                <p className="text-muted-foreground line-clamp-2">{l(condition.summary)}</p>
-                <div className="mt-3">
-                  <details>
-                    <summary className="cursor-pointer text-sm font-medium text-primary">
-                      {t("cta.learnMore")}
+    <>
+      <PageHero
+        eyebrow={t("nav.conditions")}
+        title={t("conditions.title")}
+        lead={t("conditions.lead")}
+        image={media.xrayFigure}
+        imageAlt={t("hero.figureAlt")}
+      />
+
+      <section className="py-20 sm:py-24">
+        <div className="container-page">
+          <ScrollReveal>
+            <BodyMap />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section
+        id="conditions-list"
+        className="scroll-mt-24 border-t border-border bg-card/40 py-20 sm:py-24"
+      >
+        <div className="container-page">
+          <ScrollReveal className="mb-10 max-w-2xl">
+            <p className="eyebrow text-primary">{t("nav.conditions")}</p>
+            <h2 className="display-md mt-4 text-foreground">{t("conditions.title")}</h2>
+          </ScrollReveal>
+
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {conditions.map((condition, index) => (
+              <ScrollReveal as="li" key={condition.slug} delay={index * 80}>
+                <article className="group flex h-full flex-col rounded-2xl border border-border bg-background p-6 transition-[transform,border-color] duration-500 hover:-translate-y-1.5 hover:border-primary/50">
+                  <span className="text-xs font-semibold tabular-nums text-muted-foreground">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-2 text-lg font-semibold leading-snug text-foreground">
+                    {l(condition.title)}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {l(condition.summary)}
+                  </p>
+
+                  <details className="mt-4">
+                    <summary className="cursor-pointer list-none text-sm font-semibold text-primary marker:hidden">
+                      <span className="inline-flex items-center gap-1.5">
+                        {t("cta.learnMore")}
+                        <ArrowRight className="size-3.5" aria-hidden />
+                      </span>
                     </summary>
-                    <dl className="mt-3 grid grid-cols-1 gap-2 text-sm">
+                    <dl className="mt-3 space-y-3 border-t border-border pt-3 text-sm">
                       <div>
-                        <dt className="text-muted-foreground mb-1">{t("condition.what")}</dt>
-                        <dd className="text-foreground">{l(condition.what)}</dd>
+                        <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          {t("condition.what")}
+                        </dt>
+                        <dd className="mt-1 text-foreground">{l(condition.what)}</dd>
                       </div>
                       <div>
-                        <dt className="text-muted-foreground mb-1">{t("condition.symptoms")}</dt>
-                        <dd>
-                          <ul>
-                            {condition.symptoms.map((s, i) => (
-                              <li key={i} className="flex items-start gap-2">
-                                <span className="text-primary flex-shrink-0">•</span>
-                                <span>{l(s)}</span>
+                        <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          {t("condition.symptoms")}
+                        </dt>
+                        <dd className="mt-1">
+                          <ul className="space-y-1">
+                            {condition.symptoms.map((symptom, i) => (
+                              <li key={i} className="flex items-start gap-2 text-muted-foreground">
+                                <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary" />
+                                <span>{l(symptom)}</span>
                               </li>
                             ))}
                           </ul>
                         </dd>
                       </div>
                       <div>
-                        <dt className="text-muted-foreground mb-1">{t("condition.evaluation")}</dt>
-                        <dd className="text-foreground">{l(condition.evaluation)}</dd>
+                        <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          {t("condition.evaluation")}
+                        </dt>
+                        <dd className="mt-1 text-foreground">{l(condition.evaluation)}</dd>
                       </div>
                       <div>
-                        <dt className="text-muted-foreground mb-1">{t("condition.when")}</dt>
-                        <dd className="text-foreground">{l(condition.when)}</dd>
+                        <dt className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                          {t("condition.when")}
+                        </dt>
+                        <dd className="mt-1 text-foreground">{l(condition.when)}</dd>
                       </div>
                     </dl>
                   </details>
-                </div>
-              </div>
+                </article>
+              </ScrollReveal>
             ))}
-          </div>
+          </ul>
+
+          <ScrollReveal className="mt-14 rounded-3xl border border-border bg-background p-8 text-center sm:p-10">
+            <p className="eyebrow text-primary">{t("bodyMap.eyebrow")}</p>
+            <h2 className="display-md mt-3 text-foreground">{t("cta.contact")}</h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {t("contact.hoursPending")}
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              {t("cta.callClinic")}
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </ScrollReveal>
         </div>
-      </ContainerPage>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
+import { ScrollProgress } from "@/components/site/ScrollProgress";
+import { THEME_INIT_SCRIPT, ThemeProvider } from "@/theme/ThemeProvider";
 import {
   Outlet,
   Link,
@@ -111,17 +113,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    // `dark` is the house style. suppressHydrationWarning covers the case where
+    // a returning visitor's saved light theme is applied before React hydrates.
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <HeadContent />
+        {/* Applies the saved theme before first paint so there is no flash. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
-      <body>
-        {/* Header and footer call useI18n, so they must live inside the provider. */}
-        <LanguageProvider>
-          <SiteHeader />
-          <main id="main">{children}</main>
-          <SiteFooter />
-        </LanguageProvider>
+      <body className="bg-background text-foreground">
+        {/* Header and footer call useI18n/useTheme, so they live inside both providers. */}
+        <ThemeProvider>
+          <LanguageProvider>
+            <ScrollProgress />
+            <SiteHeader />
+            <main id="main">{children}</main>
+            <SiteFooter />
+          </LanguageProvider>
+        </ThemeProvider>
         <Scripts />
       </body>
     </html>

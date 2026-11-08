@@ -1,0 +1,12 @@
+/**
+ * Each file in this directory is one image or clip the clinic supplied.
+ *
+ * Thumbnails belong here too, as long as their names start with "tn_" so the
+ * thumbnail helper can separate them from the originals.
+ */
+
+# Vite processed assets (fingerprints + hashed filenames) should be out of git.
+dist-vite/
+
+# Unpacked source archives: only the .glb/.jpg files above are used by the build.
+*.zip

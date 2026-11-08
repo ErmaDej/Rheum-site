@@ -52,7 +52,7 @@ export function AboutPoster({
         ref={imgRef}
         src={src}
         alt={alt}
-        loading="lazy"
+        loading="eager"
         decoding="async"
         className="h-full w-full object-cover object-top transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] select-none"
       />

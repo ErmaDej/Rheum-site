@@ -156,3 +156,130 @@
 .anim-scroll-cue { animation: scroll-cue 2s ease-in-out infinite; }
 .scene-paused * { animation-play-state: paused !important; }
 .hero-exiting .anatomy-figure { transform: scale(0.82) translateY(-4%); opacity: 0.25; transition: all 900ms var(--ease-clinical); }
+
+/* ------------------------------------------------------------------
+ * Dark theme. `.dark` is the house style; tokens flip so every existing
+ * `bg-background` / `text-foreground` / `border-border` surface follows.
+ * ------------------------------------------------------------------ */
+.dark {
+  --background: oklch(0.16 0.028 252);
+  --foreground: oklch(0.965 0.008 220);
+  --card: oklch(0.214 0.032 252);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.214 0.032 252);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.84 0.104 205);
+  --primary-foreground: oklch(0.17 0.03 252);
+  --secondary: oklch(0.262 0.04 250);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.248 0.03 250);
+  --muted-foreground: oklch(0.74 0.028 220);
+  --accent: oklch(0.3 0.05 245);
+  --accent-foreground: var(--foreground);
+  --border: oklch(0.32 0.035 250);
+  --input: oklch(0.32 0.035 250);
+  --ring: var(--cyan);
+
+  --shadow-soft: 0 1px 2px oklch(0.05 0.02 250 / 40%), 0 10px 30px -14px oklch(0.05 0.02 250 / 60%);
+  --shadow-lift: 0 2px 6px oklch(0.05 0.02 250 / 45%), 0 30px 60px -24px oklch(0.05 0.02 250 / 75%);
+  --gradient-fade: linear-gradient(180deg, var(--midnight) 0%, oklch(0.16 0.028 252) 100%);
+}
+
+html:not(.dark) { color-scheme: light; }
+html.dark { color-scheme: dark; }
+
+/* ------------------------------------------------------------------
+ * Motion system for the holographic hero and page transitions.
+ * Every animation is transform/opacity only so it stays on the compositor.
+ * ------------------------------------------------------------------ */
+@keyframes holo-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -14px, 0) rotate(-0.4deg); }
+}
+@keyframes holo-breathe {
+  0%, 100% { opacity: 0.88; filter: drop-shadow(0 0 26px oklch(0.83 0.1 205 / 26%)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 46px oklch(0.83 0.1 205 / 44%)); }
+}
+@keyframes scan {
+  0% { transform: translateY(-120%); opacity: 0; }
+  12% { opacity: 0.7; }
+  88% { opacity: 0.7; }
+  100% { transform: translateY(120%); opacity: 0; }
+}
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes aurora-shift {
+  0%, 100% { transform: translate3d(-4%, -2%, 0) scale(1.05); opacity: 0.55; }
+  50% { transform: translate3d(4%, 3%, 0) scale(1.15); opacity: 0.8; }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.85; }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translate3d(0, 28px, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.83 0.1 205 / 34%); }
+  50% { box-shadow: 0 0 0 14px oklch(0.83 0.1 205 / 0%); }
+}
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.anim-holo-float { animation: holo-float 9s ease-in-out infinite; }
+.anim-holo-breathe { animation: holo-breathe 6s ease-in-out infinite; }
+.anim-scan { animation: scan 6.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+.anim-orbit-slow { animation: orbit 42s linear infinite; }
+.anim-orbit-rev { animation: orbit 58s linear infinite reverse; }
+.anim-aurora { animation: aurora-shift 18s ease-in-out infinite; }
+.anim-twinkle { animation: twinkle 4s ease-in-out infinite; }
+.anim-glow-pulse { animation: glow-pulse 3.4s ease-out infinite; }
+.anim-marquee { animation: marquee-x 38s linear infinite; }
+.anim-rise { animation: rise-in 700ms var(--ease-clinical) both; }
+
+/* Staggered entrance for hero copy and cards. */
+.anim-rise-1 { animation-delay: 80ms; }
+.anim-rise-2 { animation-delay: 180ms; }
+.anim-rise-3 { animation-delay: 300ms; }
+.anim-rise-4 { animation-delay: 430ms; }
+.anim-rise-5 { animation-delay: 560ms; }
+
+/* Hero surface treatment */
+@utility nebula {
+  background-image:
+    radial-gradient(48% 42% at 22% 18%, oklch(0.5 0.16 245 / 34%) 0%, transparent 62%),
+    radial-gradient(42% 40% at 82% 24%, oklch(0.62 0.13 200 / 26%) 0%, transparent 64%),
+    radial-gradient(60% 50% at 50% 96%, oklch(0.4 0.12 265 / 30%) 0%, transparent 70%);
+}
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, oklch(0.83 0.1 205 / 7%) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.83 0.1 205 / 7%) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(70% 60% at 50% 45%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 45%, black 0%, transparent 100%);
+}
+@utility text-glow { text-shadow: 0 0 32px oklch(0.83 0.1 205 / 40%); }
+@utility card-lift {
+  transition: transform var(--dur-base) var(--ease-clinical), box-shadow var(--dur-base) var(--ease-clinical);
+}
+.card-lift:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
+
+/* Reduce motion: kill the decorative loops but keep content visible. */
+@media (prefers-reduced-motion: reduce) {
+  .anim-holo-float,
+  .anim-holo-breathe,
+  .anim-scan,
+  .anim-orbit-slow,
+  .anim-orbit-rev,
+  .anim-aurora,
+  .anim-twinkle,
+  .anim-glow-pulse,
+  .anim-marquee,
+  .anim-rise { animation: none !important; }
+}

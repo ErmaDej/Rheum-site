@@ -25,25 +25,29 @@ export const en = {
   "cta.telegram": "Message on Telegram",
   "hero.eyebrow": "Rheumatology · Internal Medicine · Addis Ababa",
   "hero.title": "Understand Your Body. Move Toward Better Health.",
-  "hero.body": "Specialist-led rheumatology and internal medicine care, with a focus on understanding your health and supporting your journey toward better wellbeing.",
+  "hero.body":
+    "Specialist-led rheumatology and internal medicine care, with a focus on understanding your health and supporting your journey toward better wellbeing.",
   "hero.skip": "Skip intro",
   "hero.scroll": "Scroll",
   "hero.hotspotsLabel": "Explore areas of the body",
   "hero.figureAlt": "Illustration of the human body showing joints, bones and nerve pathways",
   "home.introEyebrow": "About the clinic",
   "home.introTitle": "A clinic devoted to joints, muscles and the whole person.",
-  "home.introBody": "Rheum is a rheumatology clinic in Addis Ababa that also provides general internal medicine and subspeciality care. The clinic describes its approach as Royalty Care: treatment based on evidence, delivered with a deep understanding of what people deserve while they are in pain.",
+  "home.introBody":
+    "Rheum is a rheumatology clinic in Addis Ababa that also provides general internal medicine and subspeciality care. The clinic describes its approach as Royalty Care: treatment based on evidence, delivered with a deep understanding of what people deserve while they are in pain.",
   "home.servicesEyebrow": "What we offer",
   "home.servicesTitle": "Services",
   "home.conditionsEyebrow": "Areas of care",
   "home.conditionsTitle": "Conditions we help people understand",
-  "home.conditionsBody": "Plain-language overviews of common rheumatology concerns. They are general information, not a diagnosis.",
+  "home.conditionsBody":
+    "Plain-language overviews of common rheumatology concerns. They are general information, not a diagnosis.",
   "home.approachEyebrow": "Our approach",
   "home.approachTitle": "Royalty Care",
   "home.approach1t": "Evidence first",
   "home.approach1b": "Care decisions grounded in current medical evidence.",
   "home.approach2t": "The whole body",
-  "home.approach2b": "Joints, muscles and immune health are connected to everything else — so is internal medicine.",
+  "home.approach2b":
+    "Joints, muscles and immune health are connected to everything else — so is internal medicine.",
   "home.approach3t": "Dignity in pain",
   "home.approach3b": "Patients are treated with respect, patience and clear explanations.",
   "home.visitEyebrow": "Your visit",
@@ -51,7 +55,8 @@ export const en = {
   "home.visit1": "Call ahead to ask about availability.",
   "home.visit2": "Bring previous test results, prescriptions and a list of your current medicines.",
   "home.visit3": "Note when your symptoms started and what makes them better or worse.",
-  "home.visit4": "Your clinician will take a history, examine you, and explain any recommended tests.",
+  "home.visit4":
+    "Your clinician will take a history, examine you, and explain any recommended tests.",
   "home.resourcesTitle": "Prepare for your appointment",
   "home.resourcesBody": "Practical guidance and answers to common questions.",
   "home.faqTitle": "Frequently asked questions",
@@ -69,19 +74,23 @@ export const en = {
   "services.title": "Our Services",
   "services.lead": "General internal medicine and rheumatology services, as listed by the clinic.",
   "conditions.title": "Conditions",
-  "conditions.lead": "Educational overviews to help you prepare for a conversation with a clinician.",
+  "conditions.lead":
+    "Educational overviews to help you prepare for a conversation with a clinician.",
   "condition.what": "What it is",
   "condition.symptoms": "Signs that may warrant a medical assessment",
   "condition.evaluation": "How clinicians generally evaluate it",
   "condition.when": "When to seek care",
   "condition.related": "Related service",
   "about.title": "About the Clinic",
-  "about.lead": "A pioneering rheumatology clinic in Ethiopia, also providing general internal medicine and subspeciality care.",
+  "about.lead":
+    "A pioneering rheumatology clinic in Ethiopia, also providing general internal medicine and subspeciality care.",
   "about.missionTitle": "Our mission",
-  "about.mission": "\u201cWe provide Royalty Care. We treat based on evidence only, and we deeply understand what human beings deserve while they are in pain.\u201d",
+  "about.mission":
+    "\u201cWe provide Royalty Care. We treat based on evidence only, and we deeply understand what human beings deserve while they are in pain.\u201d",
   "about.missionSource": "From the clinic's brochure",
   "about.teamTitle": "Our team",
-  "about.teamPending": "Individual clinician profiles will be published once the clinic confirms names, titles and biographies.",
+  "about.teamPending":
+    "Individual clinician profiles will be published once the clinic confirms names, titles and biographies.",
   "about.spacesTitle": "Inside the clinic",
   "about.reception": "Reception desk with the Rheum logo",
   "about.waiting": "Bright waiting area",
@@ -94,12 +103,40 @@ export const en = {
   "resources.reviewNote": "Educational articles will be added after clinical review.",
   "crumb.home": "Home",
   "footer.disclaimerTitle": "Medical information disclaimer",
-  "footer.disclaimer": "Information on this website is general and educational. It is not a diagnosis or a substitute for consultation with a qualified clinician.",
-  "footer.emergency": "If you have urgent or emergency symptoms, seek immediate local medical care. Do not wait for a website or social-media response.",
+  "footer.disclaimer":
+    "Information on this website is general and educational. It is not a diagnosis or a substitute for consultation with a qualified clinician.",
+  "footer.emergency":
+    "If you have urgent or emergency symptoms, seek immediate local medical care. Do not wait for a website or social-media response.",
   "footer.rights": "All rights reserved.",
   "review.badge": "Pending clinical review",
   "notfound.title": "Page not found",
   "notfound.body": "The page you are looking for doesn't exist.",
+  "route.homeBlurb": "The clinic, the approach, and what a visit looks like",
+  "route.servicesBlurb": "Rheumatology, internal medicine and checkups",
+  "route.conditionsBlurb": "Plain-language guides, mapped to the body",
+  "route.aboutBlurb": "Royalty Care, the team and the spaces",
+  "route.resourcesBlurb": "Prepare for a visit, and answers to common questions",
+  "route.contactBlurb": "Phone numbers, location and the map",
+  "hero.enter": "Enter the clinic",
+  "hero.launchpad": "Where would you like to go?",
+  "hero.modelLabel": "Interactive anatomy model",
+  "hero.toggleTheme": "Switch theme",
+  "home.galleryEyebrow": "Inside the clinic",
+  "home.galleryTitle": "Care you can see before you arrive",
+  "home.galleryBody":
+    "The reception, the waiting area and the bilingual signage at the entrance. Photographs supplied by the clinic.",
+  "home.marquee":
+    "Rheumatology · Internal Medicine · Joint pain · Lupus · Gout · Fibromyalgia · Addis Ababa",
+  "bodyMap.eyebrow": "Explore by area",
+  "bodyMap.title": "Where does it hurt?",
+  "bodyMap.body":
+    "Pick an area of the body to see the conditions clinicians commonly assess there. This is educational information, not a diagnosis.",
+  "bodyMap.hint": "Select a highlighted joint",
+  "contact.mapTitle": "How to find us",
+  "about.galleryTitle": "The clinic, in pictures",
+  "about.roomTitle": "Step inside the clinic",
+  "about.roomBody":
+    "An interactive model of the clinic's treatment room. Drag to look around, or let it turn on its own.",
 } as const;
 
 export type DictKey = keyof typeof en;
@@ -126,14 +163,16 @@ export const am: Record<DictKey, string> = {
   "cta.telegram": "በቴሌግራም ይጻፉ",
   "hero.eyebrow": "ሩማቶሎጂ · የውስጥ ደዌ · አዲስ አበባ",
   "hero.title": "ሰውነትዎን ይረዱ። ወደ ተሻለ ጤና ይራመዱ።", // AM-DRAFT
-  "hero.body": "በስፔሻሊስት ሐኪሞች የሚሰጥ የሩማቶሎጂ እና የውስጥ ደዌ ህክምና — ጤናዎን እንዲረዱ እና ወደ ተሻለ ደህንነት እንዲጓዙ እንደግፋለን።", // AM-DRAFT
+  "hero.body":
+    "በስፔሻሊስት ሐኪሞች የሚሰጥ የሩማቶሎጂ እና የውስጥ ደዌ ህክምና — ጤናዎን እንዲረዱ እና ወደ ተሻለ ደህንነት እንዲጓዙ እንደግፋለን።", // AM-DRAFT
   "hero.skip": "መግቢያውን ዝለል",
   "hero.scroll": "ወደ ታች",
   "hero.hotspotsLabel": "የሰውነት ክፍሎችን ይመልከቱ", // AM-DRAFT
   "hero.figureAlt": "መገጣጠሚያዎችን፣ አጥንቶችን እና ነርቮችን የሚያሳይ የሰው አካል ሥዕል", // AM-DRAFT
   "home.introEyebrow": "ስለ ክሊኒኩ",
   "home.introTitle": "ለመገጣጠሚያዎች፣ ለጡንቻዎች እና ለሙሉ ሰው የቆመ ክሊኒክ።", // AM-DRAFT
-  "home.introBody": "ሩሁም በሀገራችን በኢትዮጵያ የመጀመሪያውና ፈር ቀዳጅ የሆነ የሩማቶሎጂ ክሊኒክ ሲሆን በተጨማሪም ጠቅላላ የውስጥ ደዌ እና ሌሎች የሰብስፔሻሊቲ ህክምና አገልግሎቶችን ይሰጣል።",
+  "home.introBody":
+    "ሩሁም በሀገራችን በኢትዮጵያ የመጀመሪያውና ፈር ቀዳጅ የሆነ የሩማቶሎጂ ክሊኒክ ሲሆን በተጨማሪም ጠቅላላ የውስጥ ደዌ እና ሌሎች የሰብስፔሻሊቲ ህክምና አገልግሎቶችን ይሰጣል።",
   "home.servicesEyebrow": "የምንሰጣቸው",
   "home.servicesTitle": "የምንሰጣቸው አገልግሎቶች",
   "home.conditionsEyebrow": "የህክምና ዘርፎች", // AM-DRAFT
@@ -179,7 +218,8 @@ export const am: Record<DictKey, string> = {
   "about.title": "ስለ ክሊኒኩ",
   "about.lead": "በኢትዮጵያ ፈር ቀዳጅ የሆነ የሩማቶሎጂ ክሊኒክ፣ ጠቅላላ የውስጥ ደዌ እና የሰብስፔሻሊቲ ህክምናም ይሰጣል።",
   "about.missionTitle": "ተልዕኳችን",
-  "about.mission": "\u201cRoyalty Care እንሰጣለን። በማስረጃ ላይ ብቻ ተመሥርተን እናክማለን፣ ሰዎች በህመም ጊዜ የሚገባቸውን በጥልቀት እንረዳለን።\u201d", // AM-DRAFT
+  "about.mission":
+    "\u201cRoyalty Care እንሰጣለን። በማስረጃ ላይ ብቻ ተመሥርተን እናክማለን፣ ሰዎች በህመም ጊዜ የሚገባቸውን በጥልቀት እንረዳለን።\u201d", // AM-DRAFT
   "about.missionSource": "ከክሊኒኩ በራሪ ወረቀት",
   "about.teamTitle": "ቡድናችን",
   "about.teamPending": "ክሊኒኩ ስሞችን፣ ማዕረጎችን እና የሕይወት ታሪኮችን ሲያረጋግጥ የሐኪሞች መግለጫ ይታተማል።", // AM-DRAFT
@@ -195,10 +235,36 @@ export const am: Record<DictKey, string> = {
   "resources.reviewNote": "ትምህርታዊ ጽሑፎች በሐኪም ከተገመገሙ በኋላ ይጨመራሉ።", // AM-DRAFT
   "crumb.home": "መነሻ",
   "footer.disclaimerTitle": "የህክምና መረጃ ማሳሰቢያ", // AM-DRAFT
-  "footer.disclaimer": "በዚህ ድረ-ገጽ ላይ ያለው መረጃ አጠቃላይና ትምህርታዊ ነው። ምርመራ ወይም ብቃት ካለው ሐኪም ጋር የሚደረግ ምክክር ምትክ አይደለም።", // AM-DRAFT
-  "footer.emergency": "አስቸኳይ ወይም የድንገተኛ ምልክቶች ካሉዎት ወዲያውኑ በአቅራቢያዎ ህክምና ያግኙ። የድረ-ገጽ ወይም የማኅበራዊ ሚዲያ ምላሽ አይጠብቁ።", // AM-DRAFT
+  "footer.disclaimer":
+    "በዚህ ድረ-ገጽ ላይ ያለው መረጃ አጠቃላይና ትምህርታዊ ነው። ምርመራ ወይም ብቃት ካለው ሐኪም ጋር የሚደረግ ምክክር ምትክ አይደለም።", // AM-DRAFT
+  "footer.emergency":
+    "አስቸኳይ ወይም የድንገተኛ ምልክቶች ካሉዎት ወዲያውኑ በአቅራቢያዎ ህክምና ያግኙ። የድረ-ገጽ ወይም የማኅበራዊ ሚዲያ ምላሽ አይጠብቁ።", // AM-DRAFT
   "footer.rights": "መብቱ በሕግ የተጠበቀ ነው።",
   "review.badge": "በሐኪም ግምገማ ላይ", // AM-DRAFT
   "notfound.title": "ገጹ አልተገኘም",
   "notfound.body": "የሚፈልጉት ገጽ የለም።",
+  "route.homeBlurb": "ክሊኒኩ፣ አቀራረባችን እና ጉብኝትዎ እንዴት እንደሚሆን", // AM-DRAFT
+  "route.servicesBlurb": "ሩማቶሎጂ፣ የውስጥ ደዌ እና ሙሉ የህክምና ምርመራ", // AM-DRAFT
+  "route.conditionsBlurb": "ቀላል ማብራሪያዎች፣ በሰውነት ካርታ ላይ", // AM-DRAFT
+  "route.aboutBlurb": "Royalty Care፣ ቡድናችን እና የክሊኒኩ ክፍሎች", // AM-DRAFT
+  "route.resourcesBlurb": "ለጉብኝትዎ ይዘጋጁ እና ለተለመዱ ጥያቄዎች መልስ ያግኙ", // AM-DRAFT
+  "route.contactBlurb": "ስልክ ቁጥሮች፣ አድራሻ እና ካርታ", // AM-DRAFT
+  "hero.enter": "ወደ ክሊኒኩ ይግቡ", // AM-DRAFT
+  "hero.launchpad": "ወዴት መሄድ ይፈልጋሉ?", // AM-DRAFT
+  "hero.modelLabel": "ተግባራዊ የሰውነት ሞዴል", // AM-DRAFT
+  "hero.toggleTheme": "ገጽታ ይቀይሩ", // AM-DRAFT
+  "home.galleryEyebrow": "በክሊኒኩ ውስጥ",
+  "home.galleryTitle": "ከመምጣትዎ በፊት ማየት የሚችሉት እንክብካቤ", // AM-DRAFT
+  "home.galleryBody":
+    "የእንግዳ መቀበያው፣ የመጠበቂያ ክፍሉ እና በመግቢያው ላይ ያለው ባለሁለት ቋንቋ ምልክት። ፎቶግራፎቹ በክሊኒኩ የቀረቡ ናቸው።", // AM-DRAFT
+  "home.marquee": "ሩማቶሎጂ · የውስጥ ደዌ · የመገጣጠሚያ ህመም · ሉፐስ · ጋውት · ፋይብሮማያልጂያ · አዲስ አበባ", // AM-DRAFT
+  "bodyMap.eyebrow": "በአካባቢ ይመልከቱ", // AM-DRAFT
+  "bodyMap.title": "የት ነው የሚያምዎት?", // AM-DRAFT
+  "bodyMap.body":
+    "በዚያ አካባቢ ሐኪሞች በተለምዶ የሚመረምሯቸውን ችግሮች ለማየት የሰውነት ክፍል ይምረጡ። ይህ ትምህርታዊ መረጃ እንጂ ምርመራ አይደለም።", // AM-DRAFT
+  "bodyMap.hint": "ምልክት ያለበትን መገጣጠሚያ ይምረጡ", // AM-DRAFT
+  "contact.mapTitle": "እንዴት እናገንዎት", // AM-DRAFT
+  "about.galleryTitle": "ክሊኒኩ በፎቶ", // AM-DRAFT
+  "about.roomTitle": "ወደ ክሊኒኩ ይግቡ", // AM-DRAFT
+  "about.roomBody": "የክሊኒኩ የህክምና ክፍል ተግባራዊ ሞዴል። ለማየት ይጎትቱ ወይም በራሱ እንዲዞር ይፍቀዱ።", // AM-DRAFT
 };
